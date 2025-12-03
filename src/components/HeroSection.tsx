@@ -17,14 +17,14 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="hero-section">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-secondary/30" />
       
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 border border-primary-foreground/20 rotate-45" />
-        <div className="absolute bottom-1/4 right-1/3 w-64 h-64 border border-primary-foreground/10 rotate-12" />
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.03]">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 border border-foreground/20 rotate-45" />
+        <div className="absolute bottom-1/4 right-1/3 w-64 h-64 border border-foreground/10 rotate-12" />
       </div>
 
       <div className="section-container relative z-10 py-32 md:py-40">
@@ -41,10 +41,10 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="text-display text-primary-foreground mb-6"
+            className="text-display text-foreground mb-6"
           >
             <span className="block">AVYX CAPITAL</span>
-            <span className="block mt-2 text-3xl md:text-4xl lg:text-5xl font-serif italic text-primary-foreground/80">
+            <span className="block mt-2 text-3xl md:text-4xl lg:text-5xl font-serif italic text-foreground/70">
               — Unlocking Value. Unstucking Companies.
             </span>
           </motion.h1>
@@ -53,7 +53,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.5 }}
-            className="text-xl md:text-2xl text-primary-foreground/70 font-light mb-8 max-w-3xl"
+            className="text-xl md:text-2xl text-muted-foreground font-light mb-8 max-w-3xl"
           >
             The private equity partner for companies seeking growth or a new home
           </motion.p>
@@ -62,14 +62,14 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.7 }}
-            className="text-lg md:text-xl text-primary-foreground/60 leading-relaxed max-w-3xl mb-4"
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mb-4"
           >
             <p className="mb-6">
               Avyx Capital invests in businesses that have built something meaningful — strong products, 
               real customers, real traction — yet find themselves plateaued or constrained.
             </p>
             <p className="mb-2">These companies don't need pep talks.</p>
-            <p className="text-primary-foreground/80 font-medium">
+            <p className="text-foreground font-medium">
               They need a partner who fixes, builds, and accelerates.
             </p>
           </motion.div>
@@ -83,7 +83,7 @@ export const HeroSection = () => {
             <button onClick={scrollToContact} className="btn-primary">
               Contact Avyx Capital
             </button>
-            <button onClick={scrollToThesis} className="btn-outline">
+            <button onClick={scrollToThesis} className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wider uppercase border-2 border-foreground/20 text-foreground transition-all duration-300 hover:bg-foreground hover:text-background">
               Learn More
             </button>
           </motion.div>
@@ -95,7 +95,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-300"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors duration-300"
         >
           <span className="text-xs tracking-widest uppercase">Scroll</span>
           <motion.div
