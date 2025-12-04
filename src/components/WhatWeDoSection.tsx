@@ -62,13 +62,13 @@ export const WhatWeDoSection = () => {
             </FadeInStagger>
           </div>
 
-          <div>
+          <div className="lg:scale-110 lg:translate-x-8">
             <FadeInSection delay={0.2}>
-              <div className="aspect-[4/3] relative overflow-hidden">
+              <div className="aspect-square relative overflow-hidden">
                 <img 
                   src={whatWeDoImg} 
                   alt="Growth chart" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </FadeInSection>

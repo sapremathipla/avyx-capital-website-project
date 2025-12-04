@@ -13,13 +13,13 @@ export const WhoWeHelpSection = () => {
     <section className="section-light py-24 md:py-36">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 lg:scale-110 lg:-translate-x-8">
             <FadeInSection>
-              <div className="aspect-[4/3] relative overflow-hidden">
+              <div className="aspect-square relative overflow-hidden">
                 <img 
                   src={whoWeHelpImg} 
                   alt="Business partnership" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </FadeInSection>
