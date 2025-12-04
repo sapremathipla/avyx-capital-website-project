@@ -1,4 +1,5 @@
 import { FadeInSection } from "./FadeInSection";
+import ourApproachImg from "@/assets/our-approach.png";
 
 export const ApproachSection = () => {
   return (
@@ -47,13 +48,12 @@ export const ApproachSection = () => {
 
           <div>
             <FadeInSection delay={0.2}>
-              <div className="aspect-square bg-gradient-to-br from-primary/5 via-brand/10 to-primary/5 relative overflow-hidden">
-                <div className="absolute inset-8 border border-border/50" />
-                <div className="absolute inset-16 border border-brand/20" />
-                <div className="absolute inset-24 bg-brand/5" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-8xl font-serif text-foreground/5">+</span>
-                </div>
+              <div className="aspect-square relative overflow-hidden">
+                <img 
+                  src={ourApproachImg} 
+                  alt="Strategic building blocks" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </FadeInSection>
           </div>

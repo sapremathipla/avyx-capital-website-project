@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import heroBanner from "@/assets/hero-banner.png";
 
 export const HeroSection = () => {
   const scrollToContact = () => {
@@ -18,14 +19,14 @@ export const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-secondary/30" />
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBanner})` }}
+      />
       
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.03]">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 border border-foreground/20 rotate-45" />
-        <div className="absolute bottom-1/4 right-1/3 w-64 h-64 border border-foreground/10 rotate-12" />
-      </div>
+      {/* Light overlay for readability */}
+      <div className="absolute inset-0 bg-background/40" />
 
       <div className="section-container relative z-10 py-32 md:py-40">
         <div className="max-w-5xl">
