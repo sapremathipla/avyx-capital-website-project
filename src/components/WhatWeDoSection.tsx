@@ -1,4 +1,5 @@
 import { FadeInSection, FadeInStagger, FadeInItem } from "./FadeInSection";
+import whatWeDoImg from "@/assets/what-we-do.png";
 
 const services = [
   {
@@ -25,9 +26,9 @@ const services = [
 
 export const WhatWeDoSection = () => {
   return (
-    <section id="what-we-do" className="section-dark py-24 md:py-36">
+    <section id="what-we-do" className="section-light py-24 md:py-36">
       <div className="section-container">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div>
             <FadeInSection>
               <span className="text-sm tracking-[0.3em] uppercase text-brand font-medium mb-6 block">
@@ -36,30 +37,42 @@ export const WhatWeDoSection = () => {
             </FadeInSection>
 
             <FadeInSection delay={0.1}>
-              <h2 className="text-headline text-primary-foreground mb-8">
+              <h2 className="text-headline text-foreground mb-8">
                 WHAT WE DO
               </h2>
             </FadeInSection>
 
             <FadeInSection delay={0.2}>
-              <div className="w-24 h-0.5 bg-brand" />
+              <div className="w-24 h-0.5 bg-brand mb-10" />
             </FadeInSection>
+
+            <FadeInStagger className="space-y-6">
+              {services.map((service, index) => (
+                <FadeInItem key={index}>
+                  <div className="border-l-2 border-brand/30 pl-6 hover:border-brand transition-colors duration-300">
+                    <h3 className="text-xl font-serif text-foreground mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {service.description}
+                    </p>
+                  </div>
+                </FadeInItem>
+              ))}
+            </FadeInStagger>
           </div>
 
-          <FadeInStagger className="space-y-8">
-            {services.map((service, index) => (
-              <FadeInItem key={index}>
-                <div className="border-l-2 border-brand/30 pl-6 hover:border-brand transition-colors duration-300">
-                  <h3 className="text-xl font-serif text-primary-foreground mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-primary-foreground/60">
-                    {service.description}
-                  </p>
-                </div>
-              </FadeInItem>
-            ))}
-          </FadeInStagger>
+          <div>
+            <FadeInSection delay={0.2}>
+              <div className="aspect-[4/3] relative overflow-hidden">
+                <img 
+                  src={whatWeDoImg} 
+                  alt="Growth chart" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </FadeInSection>
+          </div>
         </div>
       </div>
     </section>

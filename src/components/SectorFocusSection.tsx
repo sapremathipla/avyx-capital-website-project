@@ -1,4 +1,5 @@
 import { FadeInSection, FadeInStagger, FadeInItem } from "./FadeInSection";
+import sectorFocusBg from "@/assets/sector-focus-bg.png";
 
 const sectors = [
   "B2B SaaS",
@@ -9,8 +10,19 @@ const sectors = [
 
 export const SectorFocusSection = () => {
   return (
-    <section id="sectors" className="section-dark py-24 md:py-36">
-      <div className="section-container">
+    <section 
+      id="sectors" 
+      className="relative py-24 md:py-36"
+    >
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${sectorFocusBg})` }}
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-primary/60" />
+      
+      <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <FadeInSection>
             <span className="text-sm tracking-[0.3em] uppercase text-brand font-medium mb-6 block">
@@ -31,7 +43,7 @@ export const SectorFocusSection = () => {
           </FadeInSection>
 
           <FadeInSection delay={0.3}>
-            <p className="text-body-large mb-12">
+            <p className="text-lg text-primary-foreground/70 mb-12">
               We invest where value is trapped, with special strength in:
             </p>
           </FadeInSection>
@@ -39,7 +51,7 @@ export const SectorFocusSection = () => {
           <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {sectors.map((sector, index) => (
               <FadeInItem key={index}>
-                <div className="bg-primary-foreground/5 border border-primary-foreground/10 p-8 hover:border-brand/50 transition-colors duration-300">
+                <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 p-8 hover:border-brand/50 hover:bg-primary-foreground/15 transition-all duration-300">
                   <span className="text-xl font-serif text-primary-foreground">
                     {sector}
                   </span>
