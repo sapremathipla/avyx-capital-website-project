@@ -50,12 +50,12 @@ export const WhoWeHelpSection = () => {
               </p>
             </FadeInSection>
 
-            <FadeInStagger className="space-y-4 mb-10">
+            <FadeInStagger className="space-y-3 mb-10">
               {criteria.map((item, index) => (
                 <FadeInItem key={index}>
                   <div className="flex items-center gap-4">
-                    <div className="w-8 h-px bg-brand" />
-                    <span className="text-lg text-foreground">{item}</span>
+                    <div className="w-6 h-px bg-muted-foreground/50" />
+                    <span className="text-base text-foreground/80">{item}</span>
                   </div>
                 </FadeInItem>
               ))}

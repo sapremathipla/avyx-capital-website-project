@@ -10,29 +10,29 @@ export const BeliefSection = () => {
         style={{ backgroundImage: `url(${ourBeliefImg})` }}
       />
       
-      {/* Dark Overlay for readability */}
-      <div className="absolute inset-0 bg-black/60" />
+      {/* Light Overlay for readability */}
+      <div className="absolute inset-0 bg-white/30" />
       
       <div className="section-container relative z-10">
         <div className="max-w-3xl">
           <FadeInSection>
             <span className="text-sm tracking-[0.3em] uppercase text-brand font-medium mb-6 block">
-              Core Belief
+              Core Philosophy
             </span>
           </FadeInSection>
 
           <FadeInSection delay={0.1}>
-            <h2 className="text-headline text-white mb-12">
+            <h2 className="text-headline text-foreground mb-12">
               OUR BELIEF
             </h2>
           </FadeInSection>
 
           <FadeInSection delay={0.2}>
             <div className="space-y-4">
-              <p className="text-2xl md:text-3xl lg:text-4xl font-serif text-white/80 leading-relaxed">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-serif text-foreground/80 leading-relaxed">
                 Value is rarely destroyed
               </p>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-serif text-white/80 leading-relaxed">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-serif text-foreground/80 leading-relaxed">
                 It is usually trapped
               </p>
               <p className="text-2xl md:text-3xl lg:text-4xl font-serif text-brand leading-relaxed mt-6">

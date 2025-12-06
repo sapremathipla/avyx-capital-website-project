@@ -1,9 +1,16 @@
 import { FadeInSection } from "./FadeInSection";
+import indiaMapImg from "@/assets/india-map.png";
 
 export const GeographySection = () => {
   return (
-    <section className="section-cream py-24 md:py-36">
-      <div className="section-container">
+    <section className="relative py-24 md:py-36 overflow-hidden">
+      {/* Background Map Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${indiaMapImg})` }}
+      />
+      
+      <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <FadeInSection>
             <span className="text-sm tracking-[0.3em] uppercase text-brand font-medium mb-6 block">
