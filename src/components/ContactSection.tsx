@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { FadeInSection } from "./FadeInSection";
+import { ContactFormModal } from "./ContactFormModal";
 import { ArrowRight } from "lucide-react";
 
 export const ContactSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="contact" className="section-dark py-24 md:py-36">
       <div className="section-container">
@@ -23,16 +27,18 @@ export const ContactSection = () => {
           </FadeInSection>
 
           <FadeInSection delay={0.3}>
-            <a 
-              href="mailto:contact@avyxcapital.com" 
+            <button 
+              onClick={() => setIsModalOpen(true)}
               className="btn-primary inline-flex items-center gap-3 group"
             >
               <span>Contact Avyx Capital</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
+            </button>
           </FadeInSection>
         </div>
       </div>
+
+      <ContactFormModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 };
