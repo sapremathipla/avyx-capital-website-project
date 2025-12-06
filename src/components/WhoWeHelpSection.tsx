@@ -54,7 +54,7 @@ export const WhoWeHelpSection = () => {
               {criteria.map((item, index) => (
                 <FadeInItem key={index}>
                   <div className="flex items-center gap-4">
-                    <div className="w-6 h-px bg-muted-foreground/50" />
+                    <div className="w-2 h-2 bg-gray-500 rounded-full" />
                     <span className="text-base text-foreground/80">{item}</span>
                   </div>
                 </FadeInItem>

@@ -46,7 +46,7 @@ export const HeroSection = () => {
           >
             <span className="block">AVYX CAPITAL</span>
             <span className="block mt-2 text-3xl md:text-4xl lg:text-5xl font-serif italic text-foreground/70">
-              — Unlocking Value. Unstucking Companies.
+               Unlocking Value. Unstucking Companies.
             </span>
           </motion.h1>
 
@@ -66,8 +66,8 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mb-4"
           >
             <p className="mb-6">
-              Avyx Capital invests in businesses that have built something meaningful — strong products, 
-              real customers, real traction — yet find themselves plateaued or constrained.
+              Avyx Capital invests in businesses that have built something meaningful strong products, 
+              real customers, real traction  yet find themselves plateaued or constrained.
             </p>
             <p className="mb-2">These companies don't need pep talks.</p>
             <p className="text-foreground font-medium">

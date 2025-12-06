@@ -40,7 +40,7 @@ export const Header = () => {
               <img 
                 src={avyxLogo} 
                 alt="Avyx Capital" 
-                className="h-10 md:h-12 w-auto"
+                className="h-12 md:h-20 w-auto"
               />
             </a>
 

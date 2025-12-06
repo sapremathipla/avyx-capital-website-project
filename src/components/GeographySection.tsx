@@ -27,7 +27,7 @@ export const GeographySection = () => {
           <FadeInSection delay={0.2}>
             <div className="flex items-center justify-center gap-8 mb-8">
               <span className="text-3xl md:text-4xl font-serif text-foreground">India</span>
-              <div className="w-16 h-px bg-brand" />
+              <div className="w-8 h-px bg-brand" />
               <span className="text-3xl md:text-4xl font-serif text-foreground">North America</span>
             </div>
           </FadeInSection>
