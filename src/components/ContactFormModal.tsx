@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import {
   Dialog,
   DialogContent,
@@ -19,6 +20,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Check, Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface ContactFormModalProps {
   open: boolean;
@@ -75,7 +77,12 @@ interface FormErrors {
   message?: string;
 }
 
+const EMAILJS_SERVICE_ID = "service_gfukeem";
+const EMAILJS_TEMPLATE_ID = "template_au7m95n";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // User needs to add their public key
+
 export const ContactFormModal = ({ open, onOpenChange }: ContactFormModalProps) => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
@@ -138,11 +145,36 @@ export const ContactFormModal = ({ open, onOpenChange }: ContactFormModalProps) 
 
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const templateParams = {
+        fullName: formData.fullName,
+        email: formData.email,
+        country: selectedCountry?.name || "",
+        dialCode: selectedCountry?.dialCode || "",
+        mobileNumber: formData.mobileNumber,
+        purpose: formData.purpose,
+        message: formData.message,
+        year: new Date().getFullYear(),
+      };
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleClose = () => {
