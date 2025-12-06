@@ -79,7 +79,7 @@ interface FormErrors {
 
 const EMAILJS_SERVICE_ID = "service_gfukeem";
 const EMAILJS_TEMPLATE_ID = "template_au7m95n";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // User needs to add their public key
+const EMAILJS_PUBLIC_KEY = "JhmnIGMuePXVF7Ojt"; // User needs to add their public key
 
 export const ContactFormModal = ({ open, onOpenChange }: ContactFormModalProps) => {
   const { toast } = useToast();
