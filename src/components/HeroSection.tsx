@@ -45,41 +45,22 @@ export const HeroSection = () => {
             className="text-display text-foreground mb-6"
           >
             <span className="block text-center">AVYX CAPITAL</span>
-            <span className="block mt-2 text-center text-3xl md:text-4xl lg:text-5xl font-serif italic text-foreground/70">
+            <span className="relative inline-block mt-2 text-center text-3xl md:text-4xl lg:text-5xl font-serif italic text-foreground/70">
                Unlocking Value. Unstucking Companies.
+              {/* Animated straight underlines */}
+              <motion.span
+                className="absolute left-0 bottom-0 h-[3px] bg-[#F97316]"
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+              />
+              <motion.span
+                className="absolute left-0 -bottom-2 h-[2px] bg-[#F97316]/50"
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
+              />
             </span>
-            {/* Animated hand-drawn underline */}
-            <div className="flex justify-center mt-4">
-              <svg 
-                width="320" 
-                height="24" 
-                viewBox="0 0 320 24" 
-                fill="none" 
-                className="w-64 md:w-80"
-              >
-                <motion.path
-                  d="M2 12C20 8 40 16 60 10C80 4 100 18 120 12C140 6 160 16 180 10C200 4 220 18 240 12C260 6 280 14 300 10C310 8 318 12 318 12"
-                  stroke="#F97316"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  fill="none"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 1 }}
-                  transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
-                />
-                <motion.path
-                  d="M8 18C30 14 50 20 70 16C90 12 110 22 130 16C150 10 170 20 190 14C210 8 230 18 250 14C270 10 290 16 312 14"
-                  stroke="#F97316"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  fill="none"
-                  strokeOpacity="0.6"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 1 }}
-                  transition={{ duration: 1.2, delay: 1.2, ease: "easeInOut" }}
-                />
-              </svg>
-            </div>
           </motion.h1>
 
           <motion.p
