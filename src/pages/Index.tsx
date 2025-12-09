@@ -18,16 +18,16 @@ const Index = () => {
     <main className="overflow-hidden">
       <Header />
       <HeroSection />
-      <ThesisSection />
+      {/* <ThesisSection /> */}
       <SpecialSituationSection />
       <WhatWeDoSection />
       <WhoWeHelpSection />
-      <ApproachSection />
+      {/* <ApproachSection /> */}
       <SectorFocusSection />
       <TeamSection />
       <GeographySection />
       <WhyAvyxSection />
-      <BeliefSection />
+      {/* <BeliefSection /> */}
       <ContactSection />
       <Footer />
     </main>
