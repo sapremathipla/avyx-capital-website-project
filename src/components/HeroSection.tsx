@@ -45,21 +45,8 @@ export const HeroSection = () => {
             className="text-display text-foreground mb-6"
           >
             <span className="block text-center">AVYX CAPITAL</span>
-            <span className="relative inline-block mt-2 text-center text-3xl md:text-4xl lg:text-5xl font-serif italic text-foreground/70">
+            <span className="block mt-2 text-center text-3xl md:text-4xl lg:text-5xl font-serif italic text-foreground/70">
                Unlocking Value. Unstucking Companies.
-              {/* Animated straight underlines */}
-              <motion.span
-                className="absolute left-0 bottom-0 h-[3px] bg-[#F97316]"
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-              />
-              <motion.span
-                className="absolute left-0 -bottom-2 h-[2px] bg-[#F97316]/50"
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
-              />
             </span>
           </motion.h1>
 
