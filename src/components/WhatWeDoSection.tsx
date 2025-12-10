@@ -3,7 +3,7 @@ import { RefreshCw, TrendingUp, Wrench, Target, Globe } from "lucide-react";
 
 const services = [
   {
-    title: "Recapitalization & Structured Secondary",
+    title: "Recapitalization",
     description: "We clean up cap tables, create liquidity, and reset the company for growth.",
     icon: RefreshCw,
   },
