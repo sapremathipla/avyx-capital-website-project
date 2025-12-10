@@ -11,7 +11,7 @@ const situations = [
 
 export const SpecialSituationSection = () => {
   return (
-    <section className="section-cream py-24 md:py-36">
+    <section className="section-cream pt-12 pb-24 md:pt-18 md:pb-36">
       <div className="section-container">
         {/* Centered Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
