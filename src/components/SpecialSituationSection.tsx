@@ -41,7 +41,7 @@ export const SpecialSituationSection = () => {
               <div className="group bg-white border border-border/50 rounded-lg p-8 hover:shadow-xl hover:border-brand/30 transition-all duration-500 h-full">
                 <div className="flex items-center gap-4">
                   <div className="w-3 h-3 bg-brand rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
-                  <span className="text-lg font-medium text-foreground">{situation}</span>
+                  <span className="text-lg font-medium text-foreground text-center">{situation}</span>
                 </div>
               </div>
             </FadeInItem>
@@ -55,7 +55,7 @@ export const SpecialSituationSection = () => {
               <div className="group bg-white border border-border/50 rounded-lg p-8 hover:shadow-xl hover:border-brand/30 transition-all duration-500 h-full">
                 <div className="flex items-center gap-4">
                   <div className="w-3 h-3 bg-brand rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
-                  <span className="text-lg font-medium text-foreground">{situation}</span>
+                  <span className="text-lg font-medium text-foreground text-center">{situation}</span>
                 </div>
               </div>
             </FadeInItem>

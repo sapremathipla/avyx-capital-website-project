@@ -58,14 +58,14 @@ export const WhatWeDoSection = () => {
             const IconComponent = service.icon;
             return (
               <FadeInItem key={index}>
-                <div className="group bg-white border border-border/50 rounded-lg p-6 hover:shadow-xl hover:border-brand/30 transition-all duration-500 h-full flex flex-col">
+                <div className="group bg-white border border-border/50 rounded-lg p-6 hover:shadow-xl hover:border-brand/30 transition-all duration-500 h-full flex flex-col items-center">
                   <div className="w-14 h-14 rounded-full bg-brand/10 flex items-center justify-center mb-5 group-hover:bg-brand/20 transition-colors duration-300">
                     <IconComponent className="w-7 h-7 text-brand" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-lg font-serif text-foreground mb-3 leading-tight">
+                  <h3 className="text-lg font-serif text-foreground mb-3 leading-tight text-center">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed text-center">
                     {service.description}
                   </p>
                 </div>
