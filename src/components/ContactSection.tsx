@@ -7,7 +7,7 @@ export const ContactSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section id="contact" className="section-dark py-24 md:py-36">
+    <section id="contact" className="section-dark py-12 md:py-18">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center">
           <FadeInSection>

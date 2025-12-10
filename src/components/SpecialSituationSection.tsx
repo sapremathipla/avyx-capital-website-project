@@ -28,7 +28,7 @@ export const SpecialSituationSection = () => {
           </FadeInSection>
 
           <FadeInSection delay={0.2}>
-            <p className="text-body-large text-muted-foreground">
+            <p className="text-body-large text-muted-foreground mb-12">
               Avyx is a special-situation capital partner. And as the name implies — we handle situations.
             </p>
           </FadeInSection>
