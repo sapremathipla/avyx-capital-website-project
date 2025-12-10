@@ -12,7 +12,7 @@ export const SectorFocusSection = () => {
   return (
     <section 
       id="sectors" 
-      className="relative py-24 md:py-36"
+      className="relative py-12 md:py-18"
     >
       {/* Background image */}
       <div 

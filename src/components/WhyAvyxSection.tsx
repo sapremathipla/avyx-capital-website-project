@@ -12,7 +12,7 @@ const reasons = [
 
 export const WhyAvyxSection = () => {
   return (
-    <section className="section-dark py-24 md:py-36">
+    <section className="section-dark py-12 md:py-18">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           <div>

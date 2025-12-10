@@ -3,7 +3,7 @@ import indiaMapImg from "@/assets/india-map.png";
 
 export const GeographySection = () => {
   return (
-    <section className="relative py-24 md:py-36 overflow-hidden">
+    <section className="relative py-12 md:py-18 overflow-hidden">
       {/* Background Map Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

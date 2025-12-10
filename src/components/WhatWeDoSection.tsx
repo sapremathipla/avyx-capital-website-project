@@ -31,7 +31,7 @@ const services = [
 
 export const WhatWeDoSection = () => {
   return (
-    <section id="what-we-do" className="section-light py-24 md:py-36">
+    <section id="what-we-do" className="section-light py-12 md:py-18">
       <div className="section-container">
         {/* Centered Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">

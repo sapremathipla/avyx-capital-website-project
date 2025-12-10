@@ -10,10 +10,10 @@ const criteria = [
 
 export const WhoWeHelpSection = () => {
   return (
-    <section className="section-light py-24 md:py-36">
+    <section className="section-light py-12 md:py-18">
       <div className="section-container">
         {/* Centered Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <FadeInSection>
             <span className="text-sm tracking-[0.3em] uppercase text-brand font-medium mb-6 block">
               Partnership

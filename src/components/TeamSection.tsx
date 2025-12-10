@@ -20,7 +20,7 @@ const supporters = [
 
 export const TeamSection = () => {
   return (
-    <section id="team" className="section-light py-24 md:py-36">
+    <section id="team" className="section-light py-12 md:py-18">
       <div className="section-container">
         <div className="max-w-5xl mx-auto">
           <FadeInSection>

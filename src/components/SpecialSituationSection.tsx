@@ -11,10 +11,10 @@ const situations = [
 
 export const SpecialSituationSection = () => {
   return (
-    <section className="section-cream pt-12 pb-24 md:pt-18 md:pb-36">
+    <section className="section-cream pt-16 pb-16 md:pt-18 md:pb-18">
       <div className="section-container">
         {/* Centered Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto">
           <FadeInSection>
             <span className="text-sm tracking-[0.3em] uppercase text-brand font-medium mb-6 block">
               Our Focus
@@ -68,7 +68,7 @@ export const SpecialSituationSection = () => {
             <p className="text-xl md:text-2xl font-serif text-foreground/90 mb-6 italic">
               These aren't obstacles to us — they are invitations.
             </p>
-            <p className="text-body-large mb-6">
+            <p className="text-body-large mb-3">
               We step into complex, high-stakes situations with clarity, control, and operating depth.
             </p>
             <p className="text-lg font-medium text-foreground">
