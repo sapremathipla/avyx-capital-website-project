@@ -1,16 +1,19 @@
 import { FadeInSection, FadeInStagger, FadeInItem } from "./FadeInSection";
-import { Package, Users, TrendingUp, Target } from "lucide-react";
+import genuineProductsIcon from "@/assets/genuine-products-icon.png";
+import committedCustomersIcon from "@/assets/committed-customers-icon.png";
+import meaningfulRevenueIcon from "@/assets/meaningful-revenue-icon.png";
+import stalledTrajectoriesIcon from "@/assets/stalled-trajectories-icon.png";
 
 const criteria = [
-  { text: "Genuine products", icon: Package },
-  { text: "Committed customers", icon: Users },
-  { text: "Meaningful revenue", icon: TrendingUp },
-  { text: "Stalled trajectories", icon: Target },
+  { text: "Genuine products", icon: genuineProductsIcon },
+  { text: "Committed customers", icon: committedCustomersIcon },
+  { text: "Meaningful revenue", icon: meaningfulRevenueIcon },
+  { text: "Stalled trajectories", icon: stalledTrajectoriesIcon },
 ];
 
 export const WhoWeHelpSection = () => {
   return (
-    <section className="section-light py-12 md:py-18">
+    <section className="bg-white py-12 md:py-18">
       <div className="section-container">
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">
@@ -43,12 +46,15 @@ export const WhoWeHelpSection = () => {
         {/* Four Cards Grid */}
         <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {criteria.map((item, index) => {
-            const IconComponent = item.icon;
             return (
               <FadeInItem key={index}>
                 <div className="bg-brand rounded-xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
-                  <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-5">
-                    <IconComponent className="w-8 h-8 text-white" strokeWidth={1.5} />
+                  <div className="w-16 h-16 flex items-center justify-center mb-5">
+                    <img 
+                      src={item.icon} 
+                      alt={item.text} 
+                      className="w-12 h-12 object-contain"
+                    />
                   </div>
                   <span className="text-lg font-medium text-white">{item.text}</span>
                 </div>
