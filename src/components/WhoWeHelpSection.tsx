@@ -13,7 +13,7 @@ const criteria = [
 
 export const WhoWeHelpSection = () => {
   return (
-    <section className="bg-white py-12 md:py-18">
+    <section className="bg-white py-12 md:py-18" id="who-we-help">
       <div className="section-container">
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">

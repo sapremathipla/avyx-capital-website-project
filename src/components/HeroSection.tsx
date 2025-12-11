@@ -44,7 +44,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.9, delay: 0.3 }}
             className="text-display text-foreground mb-6"
           >
-            <span className="block text-center">AVYX CAPITAL</span>
+            <span className="block text-center mb-4">AVYX CAPITAL</span>
             <span className="block mt-2 text-center text-3xl md:text-4xl lg:text-5xl font-serif italic text-foreground/70">
                Unlocking Value. Unstucking Companies.
             </span>
