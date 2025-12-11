@@ -66,7 +66,7 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-5xl mb-4 text-center"
           >
             <p className="mb-6 text-center">
-              Avyx Capital invests in businesses that have built something meaningful strong products, real customers, real traction  yet find themselves plateaued or constrained. These companies don't need pep talks. They need a partner who fixes, builds, and accelerates.
+            Avyx Capital invests in businesses that have established meaningful value—demonstrated by strong products, real customers, and tangible traction—yet find themselves plateauing or facing operational constraints. These companies do not require motivation; they require a partner capable of strengthening, building, and accelerating their growth.
             </p>
             {/* <p className="mb-2">These companies don't need pep talks.</p> */}
             {/* <p className="text-foreground font-medium">
@@ -83,9 +83,9 @@ export const HeroSection = () => {
             <button onClick={scrollToContact} className="btn-primary">
               Contact Avyx Capital
             </button>
-            <button onClick={scrollToThesis} className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wider uppercase border-2 border-foreground/20 text-foreground transition-all duration-300 hover:bg-foreground hover:text-background">
+            {/* <button onClick={scrollToThesis} className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wider uppercase border-2 border-foreground/20 text-foreground transition-all duration-300 hover:bg-foreground hover:text-background">
               Learn More
-            </button>
+            </button> */}
           </motion.div>
         </div>
 
