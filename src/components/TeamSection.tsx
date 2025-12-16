@@ -86,9 +86,6 @@ export const TeamSection = () => {
               <p className="text-body-large">
                 We are friendly to all — yet we call a spade a spade when clarity demands it.
               </p>
-              <p className="text-xl font-medium text-foreground">
-                We bet where our mouth is. Always.
-              </p>
             </div>
           </FadeInSection>
         </div>
