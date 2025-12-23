@@ -1,4 +1,5 @@
 import avyxLogoWhite from "@/assets/avyx-logo-white.png";
+import logo_v2_3_08 from "@/assets/logo_v2-3-08.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,9 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6">
             <img 
-              src={avyxLogoWhite} 
+              src={logo_v2_3_08} 
               alt="Avyx Capital" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import avyxLogo from "@/assets/avyx-logo.png";
+import logo_v2_3_07 from "@/assets/logo_v2-3-07.png";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,9 +38,9 @@ export const Header = () => {
           <div className="flex items-center justify-between h-20 md:h-24">
             <a href="#" className="flex items-center">
               <img 
-                src={avyxLogo} 
+                src={logo_v2_3_07} 
                 alt="Avyx Capital" 
-                className="h-12 md:h-20 w-auto"
+                className="h-10 md:h-16 w-auto"
               />
             </a>
 
