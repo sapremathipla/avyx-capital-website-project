@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import {
@@ -94,6 +94,26 @@ export const ContactFormModal = ({ open, onOpenChange }: ContactFormModalProps) 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Handle browser back button to close modal
+  useEffect(() => {
+    if (!open) return;
+
+    // Push a new state to history when modal opens
+    const currentState = window.history.state;
+    window.history.pushState({ ...currentState, modalOpen: true }, "");
+
+    const handlePopState = () => {
+      // Close modal when back button is pressed
+      onOpenChange(false);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [open, onOpenChange]);
 
   const selectedCountry = countries.find((c) => c.code === formData.country);
 
@@ -196,7 +216,7 @@ export const ContactFormModal = ({ open, onOpenChange }: ContactFormModalProps) 
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-lg bg-background border-border/50 p-0 overflow-hidden">
+      <DialogContent className="sm:max-w-lg bg-background border-border/50 p-0 overflow-hidden [&>button]:z-[60] [&>button]:right-2 [&>button]:top-2 [&>button]:md:right-4 [&>button]:md:top-4 [&>button]:h-8 [&>button]:w-8 [&>button]:md:h-6 [&>button]:md:w-6 [&>button]:bg-background/90 [&>button]:backdrop-blur-sm [&>button]:border [&>button]:border-border/50 [&>button]:shadow-md [&>button]:opacity-100 [&>button]:hover:opacity-100 [&>button>svg]:h-5 [&>button>svg]:w-5 [&>button>svg]:md:h-4 [&>button>svg]:md:w-4">
         <AnimatePresence mode="wait">
           {isSubmitted ? (
             <motion.div
