@@ -7,6 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
+  DialogClose,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -19,7 +20,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Check, Loader2 } from "lucide-react";
+import { Check, Loader2, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface ContactFormModalProps {
@@ -216,7 +217,7 @@ export const ContactFormModal = ({ open, onOpenChange }: ContactFormModalProps) 
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-lg bg-background border-border/50 p-0 overflow-hidden [&>button]:z-[60] [&>button]:right-2 [&>button]:top-2 [&>button]:md:right-4 [&>button]:md:top-4 [&>button]:h-8 [&>button]:w-8 [&>button]:md:h-6 [&>button]:md:w-6 [&>button]:bg-background/90 [&>button]:backdrop-blur-sm [&>button]:border [&>button]:border-border/50 [&>button]:shadow-md [&>button]:opacity-100 [&>button]:hover:opacity-100 [&>button>svg]:h-5 [&>button>svg]:w-5 [&>button>svg]:md:h-4 [&>button>svg]:md:w-4">
+      <DialogContent className="sm:max-w-lg bg-background border-border/50 p-0 overflow-hidden [&>button]:hidden">
         <AnimatePresence mode="wait">
           {isSubmitted ? (
             <motion.div
@@ -256,7 +257,16 @@ export const ContactFormModal = ({ open, onOpenChange }: ContactFormModalProps) 
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <DialogHeader className="p-6 pb-0">
+              <DialogHeader className="p-6 pb-0 relative">
+                <DialogClose asChild>
+                  <button
+                    onClick={handleClose}
+                    className="absolute right-2 top-2 md:right-4 md:top-4 z-50 h-10 w-10 md:h-8 md:w-8 rounded-full bg-background/95 backdrop-blur-sm border-2 border-border shadow-lg flex items-center justify-center hover:bg-background active:scale-95 transition-all"
+                    aria-label="Close"
+                  >
+                    <X className="h-6 w-6 md:h-5 md:w-5 text-foreground" />
+                  </button>
+                </DialogClose>
                 <div className="w-12 h-0.5 bg-brand mb-4" />
                 <DialogTitle className="text-2xl font-serif text-foreground">
                   Get in Touch
