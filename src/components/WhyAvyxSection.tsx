@@ -4,7 +4,6 @@ const reasons = [
   "We fix structural issues others avoid",
   "We take responsibility, not just board seats",
   "We resolve founder–investor gridlock",
-  "We invest where our mouth is",
   "We bring clarity, control, and capability",
   "We do the unglamorous, high-impact work",
   "We focus on outcomes, not optics",

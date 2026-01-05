@@ -50,14 +50,14 @@ export const HeroSection = () => {
             </span>
           </motion.h1>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.5 }}
             className="text-xl md:text-2xl text-muted-foreground font-light mb-8 max-w-5xl text-center"
           >
             The private equity partner for companies seeking growth or a new home
-          </motion.p>
+          </motion.p> */}
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -66,7 +66,7 @@ export const HeroSection = () => {
             className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-5xl mb-4 text-center"
           >
             <p className="mb-6 text-center">
-            Avyx Capital invests in businesses that have established meaningful value—demonstrated by strong products, real customers, and tangible traction—yet find themselves plateauing or facing operational constraints. These companies do not require motivation; they require a partner capable of strengthening, building, and accelerating their growth.
+            Avyx Capital invests in businesses that have established meaningful value, yet find themselves plateauing. These companies do not require motivation ; they require a partner capable of strengthening, building, and accelerating their growth.
             </p>
             {/* <p className="mb-2">These companies don't need pep talks.</p> */}
             {/* <p className="text-foreground font-medium">

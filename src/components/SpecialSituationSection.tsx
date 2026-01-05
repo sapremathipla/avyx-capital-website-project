@@ -65,15 +65,15 @@ export const SpecialSituationSection = () => {
         {/* Bottom Quote Section */}
         <FadeInSection delay={0.4} className="mt-16">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xl md:text-2xl font-serif text-foreground/90 mb-6 italic">
+            {/* <p className="text-xl md:text-2xl font-serif text-foreground/90 mb-6 italic">
               These aren't obstacles to us — they are invitations.
-            </p>
+            </p> */}
             <p className="text-body-large mb-3">
               We step into complex, high-stakes situations with clarity, control, and operating depth.
             </p>
-            <p className="text-lg font-medium text-foreground">
+            {/* <p className="text-lg font-medium text-foreground">
               When the situation is difficult, Avyx is at its best.
-            </p>
+            </p> */}
           </div>
         </FadeInSection>
       </div>
